@@ -19,12 +19,13 @@ from django.urls import path, include
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from rest_framework.permissions import AllowAny
 
 schema_view = get_schema_view(
    openapi.Info(
       title="ALX Travel App API",
       default_version='v1',
-      description="Documentation for Travel API",
+      description="Documentation for Travel API for managing listings and bookings",
    ),
    public=True,
    permission_classes=(permissions.AllowAny,),
